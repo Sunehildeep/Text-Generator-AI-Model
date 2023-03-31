@@ -181,7 +181,7 @@ class CustomTraining(Model):
 model = CustomTraining(
     vocab_size=len(ids_from_chars.get_vocabulary()),
     embedding_dim=embedding_dim,
-    rnn_units=n_units)
+    n_units=n_units)
      
 loss = tf.losses.SparseCategoricalCrossentropy(from_logits=True)
 optimizer = tf.optimizers.Adam(learning_rate=LR)
